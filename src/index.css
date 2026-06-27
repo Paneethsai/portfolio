@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-[#050505] text-gray-200 overflow-x-hidden font-sans;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-black/40 backdrop-blur-2xl border border-white/5 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)];
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px currentColor;
+    opacity: 0.9;
+  }
+  
+  .box-glow {
+    box-shadow: 0 0 30px currentColor;
+  }
+
+  .neon-border {
+    position: relative;
+  }
+  .neon-border::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: -1px; right: -1px; bottom: -1px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    z-index: -1;
+    border-radius: inherit;
+  }
+
+  .mesh-bg {
+    background-image: url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .grid-overlay {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+@theme {
+  --color-theme-purple: #8B5CF6;
+  --color-theme-cyan: #06B6D4;
+  --color-theme-pink: #EC4899;
+  --color-theme-orange: #F97316;
+  --color-theme-green: #10B981;
+  --color-theme-blue: #3B82F6;
+  --color-theme-red: #EF4444;
+  --color-theme-yellow: #EAB308;
+  --color-theme-teal: #14B8A6;
+  --color-theme-indigo: #6366F1;
+  --color-theme-rose: #F43F5E;
+  --color-theme-bg: #030303;
+  --font-sans: 'Inter', sans-serif;
+}
