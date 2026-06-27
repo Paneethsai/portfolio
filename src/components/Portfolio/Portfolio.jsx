@@ -80,9 +80,6 @@ export default function Portfolio({ content, onEdit }) {
           <button onClick={copyLink} className="flex items-center gap-2 text-sm hover:text-white text-gray-300 transition-colors">
             <Share2 size={16} /> Share Link
           </button>
-          <button onClick={onEdit} className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-sm font-medium transition-colors border border-white/20">
-            <Edit3 size={16} /> Edit Profile
-          </button>
         </div>
       </nav>
 
@@ -327,9 +324,6 @@ export default function Portfolio({ content, onEdit }) {
 
       <footer className="relative z-10 border-t border-white/10 bg-black/50 backdrop-blur-md py-8 text-center text-gray-500 text-sm">
         <p>&copy; {new Date().getFullYear()} {content.personalInfo.fullName}. Built with React, Three.js & Tailwind.</p>
-        <button onClick={onEdit} className="mt-4 text-theme-cyan hover:underline inline-flex items-center gap-1">
-          <Edit3 size={12} /> Edit & Republish
-        </button>
       </footer>
     </div>
   );
