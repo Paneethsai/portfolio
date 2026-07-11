@@ -76,8 +76,11 @@ export default function Portfolio({ content, onEdit }) {
         <div className="font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-theme-purple to-theme-cyan" style={{ backgroundImage: `linear-gradient(to right, ${mainColor}, #fff)` }}>
           {content.personalInfo.fullName.split(' ')[0]}
         </div>
-        <div className="flex gap-4">
-          <button onClick={copyLink} className="flex items-center gap-2 text-sm hover:text-white text-gray-300 transition-colors">
+        <div className="flex gap-6">
+          <button onClick={onEdit} className="flex items-center gap-2 text-sm hover:text-white text-gray-300 transition-colors cursor-pointer">
+            <Edit3 size={16} /> Edit Profile
+          </button>
+          <button onClick={copyLink} className="flex items-center gap-2 text-sm hover:text-white text-gray-300 transition-colors cursor-pointer">
             <Share2 size={16} /> Share Link
           </button>
         </div>
